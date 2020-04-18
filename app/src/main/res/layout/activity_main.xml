@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/glider"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/opacityLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@color/blackParametersColorLayout" >
+
+        <TextView
+            android:id="@+id/Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="TAKEOFF CONDITIONS"
+            android:textSize="34sp"
+            android:paddingBottom="0dp"
+            android:textColor="@color/headerText"
+            android:fontFamily="sans-serif-medium"
+            />
+
+        <TextView
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="weather app for XC flying"
+            android:textSize="25sp"
+            android:textColor="@color/headerText"
+            android:fontFamily="sans-serif-light"
+            />
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

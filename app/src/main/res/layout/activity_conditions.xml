@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background2"
+    tools:context=".Conditions">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/relative1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blackOpacity">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="320dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/nameTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/headerText"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/titleTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginTop="10dp"
+                    android:text="XC Conditions"
+                    android:textColor="@color/headerText"
+                    android:textSize="37sp" />
+
+                <TextView
+                    android:id="@+id/dateTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="@color/headerText"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/tempText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/headerText"
+                    android:textSize="77sp" />
+
+                <TextView
+                    android:id="@+id/feelsLikeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text=""
+                    android:textColor="@color/headerText"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/linear1"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/btnText"
+                app:tabIndicatorColor="@color/tabIndicator"
+                app:tabIndicatorHeight="2dp"
+                android:background="@color/blackOpacity2">
+
+
+
+            </com.google.android.material.tabs.TabLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/constraintData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="30dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/layout_design">
+
+                <TextView
+                    android:id="@+id/pressureTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="170dp"
+                    android:text="PRESSURE"
+                    android:textColor="@color/parametersColor"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pressurePTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pressureTxt"
+                    android:layout_marginLeft="170dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text=""
+                    android:textColor="@color/btnText"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+
+                <TextView
+                    android:id="@+id/windTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WIND"
+                    android:textColor="@color/parametersColor"
+                    android:textSize="9sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/windPTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/windTxt"
+                    android:fontFamily="sans-serif-light"
+                    android:text=""
+                    android:textColor="@color/btnText"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/humidityTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/windPTxt"
+                    android:layout_marginTop="10dp"
+                    android:text="HUMIDITY"
+                    android:textColor="@color/parametersColor"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/humidityPTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/humidityTxt"
+                    android:fontFamily="sans-serif-light"
+                    android:text=""
+                    android:textColor="@color/btnText"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cloudsTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pressurePTxt"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="10dp"
+                    android:text="CLOUDS"
+                    android:textColor="@color/parametersColor"
+                    android:textSize="9sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/cloudsPTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cloudsTxt"
+                    android:layout_marginLeft="170dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text=""
+                    android:textColor="@color/btnText"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/constraintData"
+                android:layout_below="@id/tabLayout">
+
+            <TextView
+                android:id="@+id/instructionsTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="@color/headerText"
+                android:textSize="19sp" />
+
+            </androidx.viewpager.widget.ViewPager>
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
