@@ -1,4 +1,4 @@
-package com.example.myconditions;
+package com.example.XConditions;
 
 import org.junit.Test;
 

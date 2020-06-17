@@ -1,10 +1,8 @@
-package com.example.myconditions;
+package com.example.XConditions;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
@@ -12,18 +10,12 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +23,6 @@ import com.google.android.material.tabs.TabLayout;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-import com.tooltip.Tooltip;
 
 
 import org.json.JSONObject;
@@ -62,6 +53,7 @@ public class Conditions extends AppCompatActivity {
     private TextView humidity;
     private TextView cloudCover;
     private ViewPager viewPager;
+    private TextView descriptionTxt;
     private ViewPagerAdapter adapter;
     private TabLayout tabLayoutMode;
 
@@ -69,8 +61,6 @@ public class Conditions extends AppCompatActivity {
     //Delcare location manager and location listener:
     LocationManager locationManager;
     LocationListener locationListener;
-
-
 
     @SuppressLint({"ClickableViewAccessibility", "WrongViewCast", "ResourceType"})
     @Override
@@ -80,8 +70,6 @@ public class Conditions extends AppCompatActivity {
 
 
         // Cast elements from layout here:
-
-
         temperature = findViewById(R.id.tempText);
         name = findViewById(R.id.nameTxt);
         date = findViewById(R.id.dateTxt);
@@ -92,14 +80,13 @@ public class Conditions extends AppCompatActivity {
         cloudCover = findViewById(R.id.cloudsPTxt);
         viewPager = findViewById(R.id.viewPager);
         tabLayoutMode = findViewById(R.id.tabLayout);
-        TextView descriptionTxt = findViewById(R.id.instructionsTxt);
+        descriptionTxt = findViewById(R.id.instructionsTxt);
 
 
 // Setting tabLayout and adapter
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         tabLayoutMode.setupWithViewPager(viewPager);
-
 
     }
 
@@ -151,6 +138,7 @@ public class Conditions extends AppCompatActivity {
         String humidity_txt = String.valueOf(weatherDataModel.getHumidity());
         String cloudCover_txt = String.valueOf(weatherDataModel.getCloudCover());
         String temperature_txt = weatherDataModel.getTemperature();
+        String instructions_txt = weatherDataModel.getXcPotential();
 
 
         name.setText(name_txt);
@@ -161,6 +149,7 @@ public class Conditions extends AppCompatActivity {
         humidity.setText(humidity_txt + "%");
         cloudCover.setText(cloudCover_txt + "%");
         pressure.setText(pressure_txt + "hPa");
+        descriptionTxt.setText(instructions_txt);
 
 
     }
@@ -237,6 +226,7 @@ public class Conditions extends AppCompatActivity {
     public void isGpsEnabled() {
 
         LocationManager service = (LocationManager) getSystemService(LOCATION_SERVICE);
+        assert service != null;
         boolean enabled = service.isProviderEnabled(LocationManager.GPS_PROVIDER);
         if (!enabled) {
             Toast.makeText(getApplicationContext(), "Turn ON location.", Toast.LENGTH_LONG).show();
@@ -248,7 +238,10 @@ public class Conditions extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(a);
     }
 }
 

@@ -1,9 +1,8 @@
-package com.example.myconditions;
+package com.example.XConditions;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 

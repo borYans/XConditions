@@ -1,13 +1,11 @@
-package com.example.myconditions;
+package com.example.XConditions;
 
 import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.Time;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 public class WeatherDataModel {
@@ -94,7 +92,7 @@ public class WeatherDataModel {
         Log.d("CONDITIONS", "Current time is: " + timeToDouble);
 
         //Type of days
-        if (timeToDouble <= 0.0) {
+        if (timeToDouble >= 19.0) {
             return "It's getting late. Except you want to catch moonlight thermals!?";
         } else if (timeToDouble >= 1.0 && timeToDouble <= 5.00) {
             return "Night XC flying? Try on the ground for change.";
@@ -111,7 +109,7 @@ public class WeatherDataModel {
         } else if (speed >= 4 && speed <= 6 && mPressure <= 1021 && humidity >= 20 && humidity <= 67 && cloudCover <= 60) {
             return windyFizzy;
         } else {
-            return "No potential for XC flying. Drink some beer with friends.";
+            return "No potential for XC flying.";
         }
     }
 
@@ -158,7 +156,6 @@ public class WeatherDataModel {
 
         try {
             double directionInDegrees = jsonObject.getJSONObject("wind").getDouble("deg");
-
 
             if ((directionInDegrees >= 348.75) && (directionInDegrees <= 360) || (directionInDegrees >= 0) && (directionInDegrees <= 11.25)) {
                 cardinalDirection = "N";

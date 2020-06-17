@@ -1,6 +1,4 @@
-package com.example.myconditions;
-
-import android.os.Bundle;
+package com.example.XConditions;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
