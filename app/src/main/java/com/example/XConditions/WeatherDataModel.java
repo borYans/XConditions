@@ -12,14 +12,14 @@ public class WeatherDataModel {
 
 
     //Type of days
-    private static String stickyDay = "Potential sticky XC day. Expect strong hard edged thermals with bullet cores, strong sink and most likely blue sky.";
-    private static String fizzyDay = "Potential fizzy XC day. Expect softer thermals with cumulus cloud development if there is enough humidity. Should be pleasant to fly, head for base and follow the clouds!";
+    private static String stickyDay = "Expect strong hard edged thermals with bullet cores, strong sink and most likely blue sky.";
+    private static String fizzyDay = "Expect softer thermals with cumulus cloud development. Should be pleasant to fly, head for base and follow the clouds!";
     private static String soupDay = "Not likely possible for big XC distance. Warm moist stable air is thick and soup like, thermals can’t move through it well.";
-    private static String windySticky = "Windy sticky day. Hard edged thermals with strong micro cores. Weak lifts gets blown away and expect descent turbulence.";
-    private static String windyFizzy = "Windy fizzy day. Possibility for cloud street formation.";
+    private static String windySticky = "May be turbulent! Hard edged thermals with strong micro cores. Weak lifts gets blown away and expect descent turbulence.";
+    private static String windyFizzy = "Windy unstable day. Possibility for cloud street formation.";
     //Searchmode for the days
-    private static String searchModeSticky = "Search wide and slow covering as much ground as possible with the best sink rate. Thermals will be sticky and follow the terrain, search on most heated sources and fly over the mountain peaks.";
-    private static String searchModeFizzy = "Thermals will trigger on slightest change in terrain. If you are high above half cloudbase height, then search for a cumulus development. If you are low, look for good heated ground sources or soarable ridges. ";
+    private static String searchModeSticky = "Search wide and slow covering as much ground as possible with the best sink rate. Thermal will trigger on the most heated sources and fly over the mountain peaks.";
+    private static String searchModeFizzy = "Thermals will trigger on slightest change in terrain. Usually best and strongest thermals are away from the mountain.";
     private static String searchModeSoup = "Try to search for very good heated source on day like this and hope that there will be any lift.";
     private static String searchModeWindyS = "Search downwind of any good heated source on the ground. Towns and villages works good on a blue day.";
     private static String searchModeWindyF = "The best lift you will find on the upwind side of the cloud. If you are low, then search downwind from heated source on the ground.";

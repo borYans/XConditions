@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(getApplicationContext(),Conditions.class);
                 startActivity(intent);
-            }}, 3000);}
+            }}, 1500);}
 
     }
 

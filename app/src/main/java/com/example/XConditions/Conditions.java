@@ -95,6 +95,7 @@ public class Conditions extends AppCompatActivity {
         super.onResume();
         Log.d("Clima", "onResume() called");
         Log.d("Clima", "Getting weather for current location");
+        Toast.makeText(getApplicationContext(), "Loading data...This may take couple of seconds.", Toast.LENGTH_LONG).show();
         isGpsEnabled();
         getWeatherForCurrentLocation();
 

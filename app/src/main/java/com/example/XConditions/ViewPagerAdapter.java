@@ -38,9 +38,9 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             return "Description";
         } else if (position == 1) {
-            return "Search mode";
+            return "Search";
         } else if (position == 2) {
-            return "Climb mode";
+            return "Climb";
         } else
             return null;
     }

@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-light"
-                    android:text="XC Conditions"
+                    android:text="@string/xc_conditions"
                     android:textColor="@color/headerText"
                     android:textSize="32sp" />
 
@@ -130,10 +130,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="170dp"
-                    android:text="PRESSURE"
+                    android:text="@string/pressure"
                     android:textColor="@color/parametersColor"
-                    android:textSize="9sp"
-                    android:textStyle="bold" />
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="170dp" />
 
                 <TextView
                     android:id="@+id/pressurePTxt"
@@ -145,16 +146,17 @@
                     android:text=""
                     android:textColor="@color/btnText"
                     android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginStart="170dp" />
 
 
                 <TextView
                     android:id="@+id/windTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="WIND"
+                    android:text="@string/wind"
                     android:textColor="@color/parametersColor"
-                    android:textSize="9sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -174,9 +176,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/windPTxt"
                     android:layout_marginTop="10dp"
-                    android:text="HUMIDITY"
+                    android:text="@string/humidity"
                     android:textColor="@color/parametersColor"
-                    android:textSize="9sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -197,10 +199,11 @@
                     android:layout_below="@id/pressurePTxt"
                     android:layout_marginLeft="170dp"
                     android:layout_marginTop="10dp"
-                    android:text="CLOUDS"
+                    android:text="@string/clouds"
                     android:textColor="@color/parametersColor"
-                    android:textSize="9sp"
-                    android:textStyle="bold" />
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="170dp" />
 
                 <TextView
                     android:id="@+id/cloudsPTxt"
@@ -212,7 +215,8 @@
                     android:text=""
                     android:textColor="@color/btnText"
                     android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_marginStart="170dp" />
 
 
             </RelativeLayout>
