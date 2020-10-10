@@ -15,9 +15,10 @@
         tools:ignore="LockedOrientationActivity"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.XConditions.Conditions"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name="com.example.XConditions.MainActivity"
+        <activity
+            android:name="com.conditions.XConditions.ConditionsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.conditions.XConditions.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

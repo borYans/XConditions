@@ -1,4 +1,4 @@
-package com.example.XConditions;
+package com.conditions.XConditions;
 
 import android.util.Log;
 
@@ -12,25 +12,12 @@ public class WeatherDataModel {
 
 
     //Type of days
-    private static String stickyDay = "Expect strong hard edged thermals with bullet cores, strong sink and most likely blue sky.";
-    private static String fizzyDay = "Expect softer thermals with cumulus cloud development. Should be pleasant to fly, head for base and follow the clouds!";
-    private static String soupDay = "Not likely possible for big XC distance. Warm moist stable air is thick and soup like, thermals can’t move through it well.";
-    private static String windySticky = "May be turbulent! Hard edged thermals with strong micro cores. Weak lifts gets blown away and expect descent turbulence.";
-    private static String windyFizzy = "Windy unstable day. Possibility for cloud street formation.";
-    //Searchmode for the days
-    private static String searchModeSticky = "Search wide and slow covering as much ground as possible with the best sink rate. Thermal will trigger on the most heated sources and fly over the mountain peaks.";
-    private static String searchModeFizzy = "Thermals will trigger on slightest change in terrain. Usually best and strongest thermals are away from the mountain.";
-    private static String searchModeSoup = "Try to search for very good heated source on day like this and hope that there will be any lift.";
-    private static String searchModeWindyS = "Search downwind of any good heated source on the ground. Towns and villages works good on a blue day.";
-    private static String searchModeWindyF = "The best lift you will find on the upwind side of the cloud. If you are low, then search downwind from heated source on the ground.";
-    //ClimbMode for the days
-    private static String climbModeSticky = "When you hit micro cores crank hard and tight as possible. You might get half turn in lift, but for sure you can climb like this. Fight for every meter and never give up!";
-    private static String climbModeFizzy = "Don't turn immediately, relax and feel the glider. Listen to your vario and work your 360 turns.";
-    private static String climbModeSoupDay = "Try to listen your vario and hang for any climb rate you get.";
-    private static String climbModeW_S = "Stronger cores punch trough and stay upwind. That is your goal, center your 360s on the upwind side of thermals.";
-    private static String climModeW_F = "Find the strongest lift by working the upwind side of the thermal.";
-    private static String morning = "Good morning! Later you will get your info. First thing is coffee!";
-    private static String morning_search = "Search for perfect spot to drink your coffee";
+    private static String stickyDay = "";
+    private static String fizzyDay = "";
+    private static String soupDay = "";
+    private static String windySticky = "";
+    private static String windyFizzy = "";
+    private static String morning = "";
     // TODO: Declare the member variables here
 
     private String thisDate;
@@ -116,32 +103,39 @@ public class WeatherDataModel {
     private static String searchMode(WeatherDataModel weatherDataModel) {
 
         if (weatherDataModel.getXcPotential().equals(stickyDay)) {
-            return searchModeSticky;
+            //Searchmode for the days
+            return "";
         } else if (weatherDataModel.getXcPotential().equals(fizzyDay)) {
-            return searchModeFizzy;
+            return "";
         } else if (weatherDataModel.getXcPotential().equals(soupDay)) {
-            return searchModeSoup;
+            return "";
         } else if (weatherDataModel.getXcPotential().equals(windySticky)) {
-            return searchModeWindyS;
+            return "";
         } else if (weatherDataModel.getXcPotential().equals(windyFizzy)) {
-            return searchModeWindyF;
+            return "";
         } else if (weatherDataModel.getXcPotential().equals(morning)) {
-            return morning_search;
-        } else return "Search for cold beer. Why not?";
+            return "";
+        } else return "";
 
     }
 
     private static String climbMode(WeatherDataModel weatherDataModel) {
 
         if (weatherDataModel.getXcPotential().equals(stickyDay)) {
+            //ClimbMode for the days
+            String climbModeSticky = "When you hit micro cores crank hard and tight as possible. You might get half turn in lift, but for sure you can climb like this. Fight for every meter and never give up!";
             return climbModeSticky;
         } else if (weatherDataModel.getXcPotential().equals(fizzyDay)) {
+            String climbModeFizzy = "Don't turn immediately, relax and feel the glider. Listen to your vario and work your 360 turns.";
             return climbModeFizzy;
         } else if (weatherDataModel.getXcPotential().equals(soupDay)) {
+            String climbModeSoupDay = "Try to listen your vario and hang for any climb rate you get.";
             return climbModeSoupDay;
         } else if (weatherDataModel.getXcPotential().equals(windySticky)) {
+            String climbModeW_S = "Stronger cores punch trough and stay upwind. That is your goal, center your 360s on the upwind side of thermals.";
             return climbModeW_S;
         } else if (weatherDataModel.getXcPotential().equals(windyFizzy)) {
+            String climModeW_F = "Find the strongest lift by working the upwind side of the thermal.";
             return climModeW_F;
         } else
             return "Climb mode is turned OFF.";

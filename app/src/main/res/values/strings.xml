@@ -8,4 +8,22 @@
     <string name="humidity">HUMIDITY</string>
     <string name="clouds">CLOUDS</string>
     <string name="xc_conditions">XC Conditions</string>
+
+    <!-- Type of day conditions   -->
+    <string name="stickyDay">Expect strong hard edged thermals with bullet cores, strong sink and most likely blue sky.</string>
+    <string name="fizzyDay">Expect softer thermals with cumulus cloud development. Should be pleasant to fly, head for base and follow the clouds!</string>
+    <string name="soupDay">Not likely possible for big XC distance. Warm moist stable air is thick and soup like, thermals can’t move through it well.</string>
+    <string name="windySticky">May be turbulent! Hard edged thermals with strong micro cores. Weak lifts gets blown away and expect descent turbulence.</string>
+    <string name="windyFizzy">Windy unstable day. Possibility for cloud street formation.</string>
+    <string name="morningGreet">Good morning! Later you will get your info. First thing is coffee!</string>
+
+    <!-- SearchMode for the specific day -->
+    <string name="stickyDay_search">Search wide and slow covering as much ground as possible with the best sink rate. Thermal will trigger on the most heated sources and fly over the mountain peaks.</string>
+    <string name="fizzyDay_search">Thermals will trigger on slightest change in terrain. Usually best and strongest thermals are away from the mountain.</string>
+    <string name="soupDay_search">Try to search for very good heated source on day like this and hope that there will be any lift.</string>
+    <string name="windySticky_search">Search downwind of any good heated source on the ground. Towns and villages works good on a blue day.</string>
+    <string name="windyFizzy_search">The best lift you will find on the upwind side of the cloud. If you are low, then search downwind from heated source on the ground.</string>
+    <string name="morningGreet_search">Search for perfect spot to drink your coffee.</string>
+    <string name="searchForBeer">Search for cold beer. Why not?</string>
+
 </resources>

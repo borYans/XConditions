@@ -1,4 +1,4 @@
-package com.example.XConditions;
+package com.conditions.XConditions;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,14 +10,14 @@ import java.util.ArrayList;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
-    private ArrayList<DemoFragment> fragments = new ArrayList();
+    private ArrayList<ConditionsFragment> fragments = new ArrayList();
 
     public ViewPagerAdapter(FragmentManager supportFragmentManager) {
         super(supportFragmentManager);
 
-        fragments.add(new DemoFragment());
-        fragments.add(new DemoFragment());
-        fragments.add(new DemoFragment());
+        fragments.add(new ConditionsFragment());
+        fragments.add(new ConditionsFragment());
+        fragments.add(new ConditionsFragment());
     }
 
     @NonNull
@@ -36,7 +36,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
 
         if (position == 0) {
-            return "Description";
+            return "Conditions";
         } else if (position == 1) {
             return "Search";
         } else if (position == 2) {
