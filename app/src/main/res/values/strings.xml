@@ -26,4 +26,15 @@
     <string name="morningGreet_search">Search for perfect spot to drink your coffee.</string>
     <string name="searchForBeer">Search for cold beer. Why not?</string>
 
+    <!-- ClimbMode for the specific day -->
+    <string name="stickyDay_climb">When you hit micro cores crank hard and tight as possible. You might get half turn in lift, but for sure you can climb like this. Fight for every meter and never give up!</string>
+    <string name="fizzyDay_climb">Don\'t turn immediately, relax and feel the glider. Listen to your vario and work your 360 turns.</string>
+    <string name="soupDay_climb">Try to listen your vario and hang for any climb rate you get.</string>
+    <string name="windySticky_climb">Stronger cores punch trough and stay upwind. That is your goal, center your 360s on the upwind side of thermals.</string>
+    <string name="windyFizzy_climb">Find the strongest lift by working the upwind side of the thermal.</string>
+    <string name="morningGreet_climb">Good morning! Later you will get your info. First thing is coffee!</string>
+    <string name="noThermalNoClimb">No thermals, no climbing.</string>
+    <string name="stickyDay1">Expect strong hard edged thermals with bullet cores, strong sink and most likely blue sky.</string>
+
+
 </resources>

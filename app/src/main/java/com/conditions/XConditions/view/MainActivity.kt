@@ -1,4 +1,4 @@
-package com.conditions.XConditions
+package com.conditions.XConditions.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,6 +13,6 @@ class MainActivity : AppCompatActivity() {
         Handler().postDelayed({
             val intent = Intent(applicationContext, ConditionsActivity::class.java)
             startActivity(intent)
-        }, 1500)
+        }, 1300)
     }
 }

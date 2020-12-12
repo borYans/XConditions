@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background2"
-    tools:context="com.conditions.XConditions.ConditionsActivity">
+    tools:context="com.conditions.XConditions.view.ConditionsActivity">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -13,11 +13,25 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/relative1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/blackOpacity">
+
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                app:layout_constraintEnd_toEndOf="@+id/viewPager"
+                app:layout_constraintStart_toStartOf="@+id/viewPager"
+                app:layout_constraintTop_toTopOf="@+id/linear1" />
 
             <LinearLayout
                 android:id="@+id/linear1"
@@ -71,8 +85,8 @@
                     android:id="@+id/feelsLikeTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
                     android:layout_marginBottom="20dp"
+                    android:fontFamily="sans-serif-light"
                     android:text=""
                     android:textColor="@color/headerText"
                     android:textSize="18sp" />
@@ -90,8 +104,7 @@
                 app:tabIndicatorColor="@color/tabIndicator"
                 app:tabIndicatorHeight="2dp"
                 app:tabMode="fixed"
-                app:tabTextColor="@color/btnText">
-            </com.google.android.material.tabs.TabLayout>
+                app:tabTextColor="@color/btnText" />
 
 
             <androidx.viewpager.widget.ViewPager
@@ -101,16 +114,18 @@
                 app:layout_constraintBottom_toTopOf="@+id/constraintData"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tabLayout" >
+                app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
 
                 <TextView
                     android:id="@+id/instructionsTxt"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
 
             </androidx.viewpager.widget.ViewPager>
+
 
             <RelativeLayout
                 android:id="@+id/constraintData"
@@ -126,25 +141,25 @@
                     android:id="@+id/pressureTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="170dp"
                     android:layout_marginLeft="170dp"
                     android:text="@string/pressure"
                     android:textColor="@color/parametersColor"
                     android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:layout_marginStart="170dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/pressurePTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/pressureTxt"
+                    android:layout_marginStart="170dp"
                     android:layout_marginLeft="170dp"
                     android:fontFamily="sans-serif-light"
                     android:text=""
                     android:textColor="@color/btnText"
                     android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:layout_marginStart="170dp" />
+                    android:textStyle="bold" />
 
 
                 <TextView
@@ -194,32 +209,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/pressurePTxt"
+                    android:layout_marginStart="170dp"
                     android:layout_marginLeft="170dp"
                     android:layout_marginTop="10dp"
                     android:text="@string/clouds"
                     android:textColor="@color/parametersColor"
                     android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:layout_marginStart="170dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/cloudsPTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/cloudsTxt"
+                    android:layout_marginStart="170dp"
                     android:layout_marginLeft="170dp"
                     android:fontFamily="sans-serif-light"
                     android:text=""
                     android:textColor="@color/btnText"
                     android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:layout_marginStart="170dp" />
+                    android:textStyle="bold" />
 
 
             </RelativeLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 

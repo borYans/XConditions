@@ -16,9 +16,9 @@
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.conditions.XConditions.ConditionsActivity"
+            android:name="com.conditions.XConditions.view.ConditionsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.conditions.XConditions.MainActivity"
+        <activity android:name="com.conditions.XConditions.view.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

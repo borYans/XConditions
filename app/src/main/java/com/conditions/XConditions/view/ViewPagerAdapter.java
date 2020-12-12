@@ -1,16 +1,16 @@
-package com.conditions.XConditions;
+package com.conditions.XConditions.view;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
-    private ArrayList<ConditionsFragment> fragments = new ArrayList();
+    private final ArrayList<ConditionsFragment> fragments = new ArrayList();
 
     public ViewPagerAdapter(FragmentManager supportFragmentManager) {
         super(supportFragmentManager);
@@ -20,7 +20,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         fragments.add(new ConditionsFragment());
     }
 
-    @NonNull
+
+    @NotNull
     @Override
     public Fragment getItem(int position) {
         return this.fragments.get(position);
@@ -31,25 +32,25 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         return this.fragments.size();
     }
 
-    @Nullable
+
     @Override
     public CharSequence getPageTitle(int position) {
 
-        if (position == 0) {
-            return "Conditions";
-        } else if (position == 1) {
-            return "Search";
-        } else if (position == 2) {
-            return "Climb";
-        } else
-            return null;
+       switch (position) {
+           case 0: return "Conditions";
+           case 1: return "Search";
+           case 2: return  "Climb";
+           default: return null;
+       }
     }
 
-    public void updateFragments(WeatherDataModel weatherDataModel) {
 
-            this.fragments.get(0).updateUI(weatherDataModel);
-            this.fragments.get(1).updateUISearch(weatherDataModel);
-            this.fragments.get(2).updateUIClimb(weatherDataModel);
+
+    public void updateFragments(DayType dayType) {
+
+            this.fragments.get(0).updateUI(dayType);
+            this.fragments.get(1).updateUISearch(dayType);
+            this.fragments.get(2).updateUIClimb(dayType);
 
         }
     }
